@@ -141,7 +141,9 @@ named!(
             tag!("sfixed64") => { |_| FieldType::Sfixed64 } |
             tag!("bool") => { |_| FieldType::Bool } |
             tag!("string") => { |_| FieldType::String } |
+            tag!("ref_counted_string") => { |_| FieldType::RefCountedString } |
             tag!("bytes") => { |_| FieldType::Bytes } |
+            tag!("ref_counted_bytes") => { |_| FieldType::RefCountedBytes } |
             tag!("float") => { |_| FieldType::Float } |
             tag!("double") => { |_| FieldType::Double } |
             tag!("group") => { |_| FieldType::Group(Vec::new()) } |

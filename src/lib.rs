@@ -111,19 +111,33 @@ pub enum FieldType {
     ///
     /// May contain any arbitrary sequence of bytes.
     Bytes,
-    /// Protobut fixed32
+    /// Protobuf string
+    ///
+    /// # Remarks
+    ///
+    /// A string must always contain UTF-8 encoded or 7-bit ASCII text.
+    /// For reference counted type (for zero-copy serialization).
+    RefCountedString,
+    /// Protobuf bytes
+    ///
+    /// # Remarks
+    ///
+    /// May contain any arbitrary sequence of bytes.
+    /// For reference counted type (for zero-copy serialization).
+    RefCountedBytes,
+    /// Protobuf fixed32
     ///
     /// # Remarks
     ///
     /// Always four bytes. More efficient than uint32 if values are often greater than 2^28.
     Fixed32,
-    /// Protobut sfixed32
+    /// Protobuf sfixed32
     ///
     /// # Remarks
     ///
     /// Always four bytes.
     Sfixed32,
-    /// Protobut float
+    /// Protobuf float
     Float,
     /// Protobuf message or enum (holds the name)
     MessageOrEnum(String),
