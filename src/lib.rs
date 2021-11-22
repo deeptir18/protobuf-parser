@@ -2,7 +2,8 @@
 //!
 //! This crate can be seen as a rust transcription of the
 //! [descriptor.proto](https://github.com/google/protobuf/blob/master/src/google/protobuf/descriptor.proto) file
-
+#![allow(ellipsis_inclusive_range_patterns)]
+#![allow(unused_doc_comments)]
 #[macro_use]
 extern crate nom;
 
